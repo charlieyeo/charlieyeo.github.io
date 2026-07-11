@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="facebook-domain-verification" content="fbk9uzb9h8x9ujzcuhrbthzbkvlzb2" />
+  <title>Picit Picit Refleksologi & Spa</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: #faf8f5;
+      color: #2c2c2a;
+    }
+
+    /* NAV */
+    nav {
+      background: #2c2c2a;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      color: #e8d5b0;
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      font-weight: bold;
+    }
+    nav .reg {
+      color: #9a8a72;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #2c2c2a 0%, #4a3f35 60%, #6b5744 100%);
+      color: #faf8f5;
+      text-align: center;
+      padding: 5rem 2rem 4rem;
+    }
+    .hero .tagline {
+      font-size: 0.85rem;
+      letter-spacing: 0.25em;
+      color: #c8aa80;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 {
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: normal;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+      color: #f5ead6;
+    }
+    .hero p {
+      font-size: 1rem;
+      color: #c8b898;
+      max-width: 500px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+      font-style: italic;
+    }
+    .hero .cta {
+      display: inline-block;
+      border: 1px solid #c8aa80;
+      color: #e8d5b0;
+      padding: 0.75rem 2rem;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      transition: background 0.2s;
+    }
+    .hero .cta:hover { background: rgba(200,170,128,0.15); }
+
+    /* SERVICES */
+    .section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .section-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #9a8a72;
+      margin-bottom: 0.5rem;
+    }
+    .section h2 {
+      font-size: 1.6rem;
+      font-weight: normal;
+      color: #2c2c2a;
+      margin-bottom: 2rem;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    .service-card {
+      background: #fff;
+      border: 1px solid #e8e0d4;
+      padding: 1.5rem;
+      border-radius: 4px;
+    }
+    .service-card .icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .service-card h3 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #2c2c2a;
+    }
+    .service-card p {
+      font-size: 0.85rem;
+      color: #6b5e4e;
+      line-height: 1.6;
+    }
+
+    /* DIVIDER */
+    .divider {
+      border: none;
+      border-top: 1px solid #e8e0d4;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* ABOUT */
+    .about-bg {
+      background: #f0ebe3;
+    }
+    .about-bg .section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    @media (max-width: 600px) {
+      .about-bg .section { grid-template-columns: 1fr; }
+    }
+    .about-text h2 {
+      font-size: 1.6rem;
+      font-weight: normal;
+      margin-bottom: 1rem;
+    }
+    .about-text p {
+      font-size: 0.9rem;
+      color: #5a4e42;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .about-info { }
+    .info-row {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      align-items: flex-start;
+    }
+    .info-row .info-icon {
+      font-size: 1rem;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    .info-row .info-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #9a8a72;
+      margin-bottom: 0.2rem;
+    }
+    .info-row .info-val {
+      font-size: 0.9rem;
+      color: #2c2c2a;
+      line-height: 1.5;
+    }
+    .info-row a {
+      color: #6b5744;
+      text-decoration: none;
+    }
+    .info-row a:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    footer {
+      background: #2c2c2a;
+      color: #9a8a72;
+      text-align: center;
+      padding: 2.5rem 2rem;
+      font-size: 0.8rem;
+      line-height: 1.8;
+    }
+    footer .company-name {
+      color: #e8d5b0;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+    footer .reg-no {
+      color: #6b6460;
+      font-size: 0.72rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+    footer .footer-contact {
+      color: #9a8a72;
+    }
+    footer .footer-contact a {
+      color: #c8aa80;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">PICIT PICIT REFLEKSOLOGI &amp; SPA</div>
+    <div class="reg">Reg. No. JM0808573-D</div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="tagline">Traditional Reflexology &amp; Wellness</div>
+    <h1>Restore Your Body.<br>Renew Your Spirit.</h1>
+    <p>Professional reflexology and spa treatments designed to relieve tension, improve circulation, and bring you back to balance.</p>
+    <a href="tel:+60187689078" class="cta">Book a Session</a>
+  </section>
+
+  <!-- SERVICES -->
+  <div class="section">
+    <div class="section-label">What We Offer</div>
+    <h2>Our Treatments</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="icon">🦶</div>
+        <h3>Foot Reflexology</h3>
+        <p>Targeted pressure on reflex points of the feet to promote healing and relaxation throughout the body.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">💆</div>
+        <h3>Full Body Massage</h3>
+        <p>Traditional techniques to ease muscle tension, reduce stress and restore your natural energy flow.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">✨</div>
+        <h3>Spa Treatments</h3>
+        <p>Rejuvenating spa packages tailored to nourish your skin and soothe your senses.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🌿</div>
+        <h3>Herbal Therapy</h3>
+        <p>Traditional herbal compress and aromatherapy to deeply relax muscles and calm the mind.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ABOUT & CONTACT -->
+  <div class="about-bg">
+    <div class="section">
+      <div class="about-text">
+        <div class="section-label">About Us</div>
+        <h2>Trusted Wellness Since 2017</h2>
+        <p>Picit Picit Refleksologi &amp; Spa is a registered Malaysian wellness centre offering professional reflexology and spa services in Skudai, Johor.</p>
+        <p>Our experienced therapists are dedicated to providing a calm, comfortable, and effective treatment experience for every guest.</p>
+      </div>
+      <div class="about-info">
+        <div class="info-row">
+          <div class="info-icon">📍</div>
+          <div>
+            <div class="info-label">Address</div>
+            <div class="info-val">Lot G1A, Tesco Mutiara Rini,<br>Jalan Persiaran Jaya 1,<br>Taman Mutiara Rini,<br>81300 Skudai, Johor, Malaysia</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">📞</div>
+          <div>
+            <div class="info-label">Phone</div>
+            <div class="info-val"><a href="tel:+60187689078">+60 18-768 9078</a></div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">✉️</div>
+          <div>
+            <div class="info-label">Email</div>
+            <div class="info-val"><a href="mailto:chialeyeo@gmail.com">chialeyeo@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🕐</div>
+          <div>
+            <div class="info-label">Business Hours</div>
+            <div class="info-val">Monday – Sunday<br>10:00 AM – 10:00 PM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="company-name">PICIT PICIT REFLEKSOLOGI &amp; SPA</div>
+    <div class="reg-no">Registration No. 201703180704 (JM0808573-D) &nbsp;|&nbsp; Registered under Business Registration Act 1956</div>
+    <div class="footer-contact">
+      Lot G1A, Tesco Mutiara Rini, Jalan Persiaran Jaya 1, Taman Mutiara Rini, 81300 Skudai, Johor, Malaysia<br>
+      <a href="tel:+60187689078">+60 18-768 9078</a> &nbsp;|&nbsp; <a href="mailto:chialeyeo@gmail.com">chialeyeo@gmail.com</a>
+    </div>
+  </footer>
+
+</body>
+</html>
